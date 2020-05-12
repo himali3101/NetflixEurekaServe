@@ -1,0 +1,15 @@
+<h2>login Form </h2>
+
+<hr>
+User Name : <input type="text" #username  > 
+<br><br>
+password : <input type="password" #password >
+
+<br>
+<input type="submit" (click) = "login(username.value, password.value) " >
+<br><br>
+<a  routerLink ="/signup">New User (Sign Up)</a>
+<h5> <a routerLink ="/adminlogin"> LOGIN AS A ADMIN </a></h5>
+
+
+

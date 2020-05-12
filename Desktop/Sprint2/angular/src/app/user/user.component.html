@@ -1,0 +1,39 @@
+<ul>
+    <li><a  routerLink ="/profile">Create Profile</a></li>
+    <li><a  routerLink ="/update">Update Profile </a></li>
+    <li><a  routerLink ="/sell">Add Property</a></li>
+    <!--<li>  <a href="/analysis">Analysis</a></li>
+    <li>  <a href="/topbuyer">top</a></li>-->
+    </ul>
+    <div class="dropdown">
+      <button class="dropbtn">Search Property</button>
+      <div class="dropdown-content">
+        <a href="/searchbylocation">Search By Location</a>
+        <a href="/searchbytype">Search By Type</a>
+        <a href="/searchbybudget">Search By Budget</a>
+        <a href="/searchbyid">Search By Id</a>
+      
+      </div>
+    </div>  
+    
+    <!-- search form 1 
+    <form  action="">
+    <table>
+    <tr>
+      <td><input type="search" class="search_1" placeholder="Enter Location"  #location/>
+     <td><select #propertyType class="search_1">
+        <option value="">--Select property type-- </option>
+        <option value="flat">Flat</option>
+        <option value="villa">Villa</option>
+        <option value="plot">Plot</option>
+    </select>
+        <td><input type="search" class="search_1" placeholder="Budget" #budget>
+        <td> <input type="search" class="search_1" placeholder="Id" #propertyId>
+      <td><button type="submit" >Search</button>       
+    
+    
+    </tr>
+    </table>
+    </form>
+  -->    
+    <router-outlet></router-outlet>

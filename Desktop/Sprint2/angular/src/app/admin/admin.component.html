@@ -1,0 +1,27 @@
+<ul>
+    <li></li> 
+   <li>  <a href="/analysis">Analysis</a></li>
+ </ul>
+ <div class="dropdown">
+    <button class="dropbtn">Search Property</button>
+    <div class="dropdown-content">
+      <a href="/searchbylocation">Search By Location</a>
+      <a href="/searchbytype">Search By Type</a>
+      <a href="/searchbybudget">Search By Budget</a>
+      <a href="/searchbyid">Search By Id</a>
+    </div>
+  </div> 
+  <div><button type="submit" (click) = "viewProfile()">View Profiles</button></div>
+
+  <table  *ngFor = 'let profile of profiles'>
+    <tr><th>User Id  </th> <td>{{profile.userId}}</tr>
+    <tr ><th>User Name</th><td>{{profile.userName}}</tr>
+    <tr><th>User Email Id</th> <td>{{profile.emailId}}</tr>
+    <tr><th>phoneNo</th> <td>{{profile.phoneNo}}</tr>
+    <tr></tr>
+    </table>
+
+
+
+
+  <router-outlet></router-outlet>

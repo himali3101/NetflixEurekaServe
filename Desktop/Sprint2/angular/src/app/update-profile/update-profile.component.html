@@ -1,0 +1,10 @@
+<div  >
+    <p class="thick">
+        Update Profile <br>
+Update User of User Id :  <input type="number" #userId><br>
+ UserName : <input type="text" #userName><br>
+ Email Id : <input type="text" #emailId><br>
+ Phone No : <input type="text" #phoneNo><br>
+ 
+
+ <input class="button" type="submit" (click) = "updateProfile(userId.value, userName.value, emailId.value,  phoneNo.value)">

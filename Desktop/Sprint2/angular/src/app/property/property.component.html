@@ -1,0 +1,54 @@
+<div  >
+    <p class="thick">
+        Add Property<br>
+<form action="/mydocs/" method="post" enctype="multipart/form-data">
+Property type  : <select #propertyType   >
+    
+    <option value="flat">Flat</option>
+    <option value="villa">Villa</option>
+    <option value="plot">Plot</option>
+</select><br>
+No. of rooms : <input type="text" #room><br>
+Floor No. : <input type="number" #floorNo><br>
+Budget : <input type="number" #budget><br>
+Property Status : <input type="text" #propertyStatus ><br>
+Area per sq : <input type="text" #areaPerSq><br>
+Location: <input type="text" #location><br>
+Locality : <input type="text" #locality><br>
+Seller Name : <input type="text" #sellerName><br>
+Seller Email Id : <input type="text" #sellerEmailId><br>
+<!--
+<input type="file"  (change)="selectFile($event)">
+<button class="btn btn-primary" [disabled]="!selectedFiles" (click)="upload()">Save File</button>
+<button class="btn btn-primary" style="margin-left: 10px" (click)="downloadFile()">View File</button>
+
+<form action="/mydocs/" method="post" enctype="multipart/form-data">
+
+-->
+Add Property Image :
+        <input type="file" id="file" (change)="onFileChanged($event)">
+    
+        <input type="button" (click)="onUpload()" value="upload">
+<hr />
+<br>
+            <div *ngIf=message>{{message}}</div>
+
+
+
+<input class="button" type="submit" (click) = "addProperty(propertyType.value, room.value, budget.value, propertyStatus.value, areaPerSq.value,
+                                            floorNo.value, location.value, locality.value,
+                                             sellerName.value, sellerEmailId.value)">
+</form>
+</div>
+
+   
+            <input type="text" class="form-control" id="name" placeholder="image name" [(ngModel)]="imageName"
+                name="name" />
+  
+            <input type="button" (click)="getImage()" value="Get Image">
+   
+            <div *ngIf=retrievedImage>
+  
+                <img [src]="retrievedImage">
+    
+<br>
